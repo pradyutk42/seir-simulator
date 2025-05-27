@@ -1,12 +1,80 @@
-# React + Vite
+# SEIR Simulator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive SEIR (Susceptible–Exposed–Infectious–Recovered) model simulator built using React, TailwindCSS, and Chart.js.  
+It allows users to input initial conditions and visualize how an infectious disease spreads and stabilizes over time.
 
-Currently, two official plugins are available:
+### Live Demo  
+[https://pradyutk42.github.io/seir-simulator/](https://pradyutk42.github.io/seir-simulator/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Natural, sentence-style user input
+- Adjustable parameters: Susceptible (S), Exposed (E), and Transmissibility (β)
+- Automatic detection of plateau in infections
+- Interactive plot showing Infectious and Recovered curves
+- Tooltips explaining transmissibility and plateau dynamics
+- Typography and styling designed for clarity and readability
+- Fully responsive and embeddable in external websites
+
+---
+
+## Technology Stack
+
+- React (with functional components and hooks)
+- Vite for development and builds
+- TailwindCSS for styling
+- Chart.js for dynamic chart rendering
+- GitHub Pages for deployment
+
+---
+
+## Getting Started
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/pradyutk42/seir-simulator.git
+   cd seir-simulator
+   ```
+2. **Install dependencies**
+   ```bash
+   npm install 
+   ``` 
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Build and deploy to GitHub Pages**
+   ```bash
+   npm run build
+   npm run deploy
+   ```
+---
+
+## Embedding
+
+You can embed the simulator in your website using the following html snippet:
+```html
+<iframe
+  src="https://pradyutk42.github.io/seir-simulator/"
+  width="100%"
+  height="720"
+  style="border: none; border-radius: 12px;"
+  loading="lazy"
+></iframe>
+
+```
+
+---
+
+## References and Attribution
+
+- SEIR model structure based on classical epidemic models described in:
+  - Hethcote, H. W. (2000). *The Mathematics of Infectious Diseases*. SIAM Review, 42(4), 599–653.
+- Chart rendering: [Chart.js](https://www.chartjs.org/) and [react-chartjs-2](https://github.com/reactchartjs/react-chartjs-2)
+- Styling: [TailwindCSS](https://tailwindcss.com/)
+
+
+   
